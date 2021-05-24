@@ -13,9 +13,6 @@ module.exports = {
     ecmaVersion: 12,
     parser: '@typescript-eslint/parser',
     sourceType: 'module',
-    ecmaFeatures: {
-      jsx: true,
-    },
   },
   plugins: ['vue', '@typescript-eslint', 'prettier'],
   rules: {
@@ -27,7 +24,7 @@ module.exports = {
     '@typescript-eslint/no-empty-interface': 'off',
     'import/extensions': [
       'error',
-      'ignorePackages',
+      'never',
       {
         vue: 'never',
         js: 'never',
