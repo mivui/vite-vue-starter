@@ -13,6 +13,9 @@ module.exports = {
     ecmaVersion: 12,
     parser: '@typescript-eslint/parser',
     sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+    },
   },
   plugins: ['vue', '@typescript-eslint', 'prettier'],
   rules: {
@@ -22,9 +25,18 @@ module.exports = {
     'import/no-extraneous-dependencies': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/no-empty-interface': 'off',
-  },
-  globals: {
-    JSX: true,
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        vue: 'never',
+        js: 'never',
+        mjs: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+      },
+    ],
   },
   settings: {
     'import/parsers': {
@@ -33,5 +45,8 @@ module.exports = {
     'import/resolver': {
       typescript: {},
     },
+  },
+  globals: {
+    JSX: true,
   },
 };
