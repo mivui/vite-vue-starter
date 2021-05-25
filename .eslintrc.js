@@ -9,13 +9,14 @@ module.exports = {
     'plugin:prettier/recommended',
     'plugin:@typescript-eslint/recommended',
   ],
+  parser: 'vue-eslint-parser',
   parserOptions: {
-    ecmaVersion: 12,
-    parser: '@typescript-eslint/parser',
-    sourceType: 'module',
     ecmaFeatures: {
       jsx: true,
     },
+    ecmaVersion: 12,
+    parser: '@typescript-eslint/parser',
+    sourceType: 'module',
   },
   plugins: ['vue', '@typescript-eslint', 'prettier'],
   rules: {
@@ -34,6 +35,7 @@ module.exports = {
       {
         vue: 'never',
         js: 'never',
+        mjs: 'never',
         jsx: 'never',
         ts: 'never',
         tsx: 'never',

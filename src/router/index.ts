@@ -8,7 +8,7 @@ export const routes: Array<RouteRecordRaw> = [
   {
     path: '/index',
     name: 'index',
-    component: () => import('@/views/main'), // 懒加载组件
+    component: () => import('@/views/test/Test.vue'),
   },
   {
     path: '/:catchAll(.*)',
