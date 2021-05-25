@@ -5,7 +5,7 @@ export default defineComponent({
   name: 'Index',
   setup() {
     /* Component Data */
-
+    document.title = import.meta.env.VITE_APP_TITLE;
     /* Component Methods */
 
     /* Component Mounted */
