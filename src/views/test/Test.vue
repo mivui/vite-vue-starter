@@ -1,11 +1,13 @@
 <template>
-  <div>Test</div>
+  <div class="hello-world">Test</div>
 </template>
 
-<script>
+<script lang="ts">
 export default {
   name: 'Test',
 };
 </script>
 
-<style scoped></style>
+<style lang="less" scoped>
+@import 'index.less';
+</style>
