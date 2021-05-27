@@ -30,10 +30,11 @@ module.exports = {
     'vue/require-default-prop': 'off',
     'prefer-promise-reject-errors': 'off',
     'import/no-extraneous-dependencies': 'off',
-    '@typescript-eslint/no-empty-function': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/no-empty-function': 'off',
     '@typescript-eslint/no-empty-interface': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
+    'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
     'import/extensions': [
       'error',
       'ignorePackages',
