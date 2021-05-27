@@ -7,10 +7,20 @@ export interface VueSlots<T = any> {
   [name: string]: (payload?: T) => VueNode;
 }
 
+export declare type VueModel =
+  | string
+  | number
+  | boolean
+  | bigint
+  | null
+  | undefined
+  | symbol
+  | Record<string, unknown>
+  | [unknown, string];
+
 interface JsxComponentCustomProps extends Omit<HTMLAttributes, 'innerHTML'> {
-  vModel?: unknown;
-  vModels?: unknown[];
-  vCustom?: unknown[];
+  vModel?: VueModel;
+  vModels?: VueModel[];
   vShow?: boolean;
   vHtml?: VueNode;
   vSlots?: VueSlots;
