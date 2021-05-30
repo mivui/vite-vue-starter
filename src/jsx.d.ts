@@ -16,10 +16,10 @@ export declare type VueModel =
   | [unknown, string];
 
 interface JsxComponentCustomProps extends Omit<HTMLAttributes, 'innerHTML'> {
-  vModel?: VueModel;
-  vModels?: VueModel[];
   vShow?: boolean;
   vSlots?: VueSlots;
+  vModel?: VueModel;
+  vModels?: VueModel[];
   vHtml?: string | JSX.Element;
   innerHTML?: string | JSX.Element;
 }
