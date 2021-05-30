@@ -1,10 +1,7 @@
-import { VNodeChild } from 'vue';
 import { HTMLAttributes } from '@vue/runtime-dom';
 
-export type VueNode = VNodeChild | JSX.Element;
-
 export interface VueSlots<T = any> {
-  [name: string]: (payload?: T) => VueNode;
+  [name: string]: (payload?: T) => JSX.Element;
 }
 
 export declare type VueModel =
@@ -22,8 +19,8 @@ interface JsxComponentCustomProps extends Omit<HTMLAttributes, 'innerHTML'> {
   vModel?: VueModel;
   vModels?: VueModel[];
   vShow?: boolean;
-  vHtml?: VueNode;
   vSlots?: VueSlots;
+  vHtml?: string | JSX.Element;
   innerHTML?: string | JSX.Element;
 }
 
