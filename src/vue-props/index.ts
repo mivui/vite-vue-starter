@@ -17,18 +17,14 @@ const dateProp = { type: Date, required: true };
 
 const jsxProp = [String, Object] as PropType<string | JSX.Element | null>;
 
-const objectProp = <T = Record<string, unknown>>(
-  required?: boolean,
-): VueProps<PropType<T>> => {
-  if (required) return { type: Object as PropType<T>, required: true };
-  return { type: Object as PropType<T>, required: false };
+const objectProp = <T = Record<string, unknown>>(): VueProps<PropType<T>> => {
+  return { type: Object as PropType<T>, required: true };
 };
 
-const arrayProp = <T = Record<string, unknown>>(
-  required?: boolean,
-): VueProps<PropType<Array<T>>> => {
-  if (required) return { type: Array as PropType<Array<T>>, required: true };
-  return { type: Array as PropType<Array<T>>, required: false };
+const arrayProp = <T = Record<string, unknown>>(): VueProps<
+  PropType<Array<T>>
+> => {
+  return { type: Array as PropType<Array<T>>, required: true };
 };
 
 const functionProp = <T = () => void>(): PropType<T> => {
