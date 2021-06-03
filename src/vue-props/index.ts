@@ -2,22 +2,41 @@ import { PropType } from 'vue';
 
 export interface VueProps<T> {
   type: T;
-  required?: boolean;
+  required: true;
 }
 
-const stringProp = { type: String, required: true };
+const stringProp = {
+  type: String,
+  required: true,
+} as VueProps<StringConstructor>;
 
-const numberProp = { type: Number, required: true };
+const stringNumberProp = {
+  type: [String, Number],
+  required: true,
+} as unknown as VueProps<StringConstructor | NumberConstructor>;
 
-const booleanProp = { type: Boolean, required: true };
+const numberProp = {
+  type: Number,
+  required: true,
+} as VueProps<NumberConstructor>;
 
-const symbolProp = { type: Symbol, required: true };
+const booleanProp = {
+  type: Boolean,
+  required: true,
+} as VueProps<BooleanConstructor>;
 
-const dateProp = { type: Date, required: true };
+const symbolProp = {
+  type: Symbol,
+  required: true,
+} as VueProps<SymbolConstructor>;
+
+const dateProp = { type: Date, required: true } as VueProps<DateConstructor>;
 
 const jsxProp = [String, Object] as PropType<string | JSX.Element | null>;
 
-const objectProp = <T = Record<string, unknown>>(): VueProps<PropType<T>> => {
+const objectProp = <
+  T extends Record<string, unknown> = Record<string, unknown>,
+>(): VueProps<PropType<T>> => {
   return { type: Object as PropType<T>, required: true };
 };
 
@@ -38,6 +57,7 @@ export {
   symbolProp,
   dateProp,
   jsxProp,
+  stringNumberProp,
   objectProp,
   arrayProp,
   functionProp,
