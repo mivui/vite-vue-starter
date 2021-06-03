@@ -9,6 +9,7 @@ module.exports = {
     'plugin:prettier/recommended',
     'plugin:@typescript-eslint/recommended',
   ],
+  ignorePatterns: ['node_module', 'build', 'dist'],
   parser: 'vue-eslint-parser',
   parserOptions: {
     ecmaFeatures: {
@@ -39,15 +40,16 @@ module.exports = {
       'error',
       'ignorePackages',
       {
-        vue: 'never',
         js: 'never',
         mjs: 'never',
         jsx: 'never',
         ts: 'never',
         tsx: 'never',
+        vue: 'never',
       },
     ],
   },
+  //reference https://github.com/benmosher/eslint-plugin-import/issues/1615#issuecomment-577500405
   settings: {
     'import/parsers': {
       '@typescript-eslint/parser': ['.ts', '.tsx'],

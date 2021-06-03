@@ -6,7 +6,8 @@
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "serve": "vite preview",
-    "eslint": "eslint --fix"
+    "eslint": "eslint --fix",
+    "stylelint": "stylelint **/*.less"
   },
   "dependencies": {
     "axios": "^0.21.1",
@@ -30,6 +31,10 @@
     "less": "^4.1.1",
     "mockjs": "^1.1.0",
     "prettier": "^2.3.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-order": "^4.1.0",
     "typescript": "^4.3.2",
     "vite": "^2.3.6",
     "vite-plugin-mock": "^2.7.0",
