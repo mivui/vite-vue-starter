@@ -3,7 +3,7 @@ import { defineComponent, computed } from 'vue';
 export default defineComponent({
   name: 'SvgIcon',
   props: {
-    class: { type: String },
+    class: String,
     prefix: {
       type: String,
       default: 'icon',
