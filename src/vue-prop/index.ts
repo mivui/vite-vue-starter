@@ -42,6 +42,6 @@ export function vueNode(value?: string) {
     .get();
 }
 
-export function method<T = () => void>() {
+export function func<T = () => void>() {
   return new VueProp<T>().value(Function).get();
 }
