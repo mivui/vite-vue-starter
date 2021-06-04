@@ -29,10 +29,9 @@ export function date(value?: Date) {
 }
 
 export function vueNode(value?: string) {
-  return new VueProp<JSX.Element | string | null>().value(
-    [String, Object],
-    value,
-  );
+  return new VueProp<JSX.Element | string | null>()
+    .value([String, Object], value)
+    .get();
 }
 
 export function func<T = () => void>() {
