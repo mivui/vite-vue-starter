@@ -28,12 +28,12 @@ export function date(value?: Date) {
   return new VueProp<Date>().value(Date, value);
 }
 
-export function object<T extends Record<string, unknown>>(value?: T) {
+export function object<T>(value?: T) {
   return new VueProp<T>().value(Object, value);
 }
 
-export function array<T>(value?: T) {
-  return new VueProp<T>().value(Array, value);
+export function array<T>(value?: Array<T>) {
+  return new VueProp<Array<T>>().value(Array, value);
 }
 
 export function vueNode(value?: string) {
