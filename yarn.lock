@@ -4329,10 +4329,19 @@ postcss@^7.0.0, postcss@^7.0.14, postcss@^7.0.17, postcss@^7.0.2, postcss@^7.0.2
     source-map "^0.6.1"
     supports-color "^6.1.0"
 
-postcss@^8.1.10, postcss@^8.2.10:
+postcss@^8.1.10:
   version "8.3.0"
   resolved "https://registry.nlark.com/postcss/download/postcss-8.3.0.tgz#b1a713f6172ca427e3f05ef1303de8b65683325f"
   integrity sha1-sacT9hcspCfj8F7xMD3otlaDMl8=
+  dependencies:
+    colorette "^1.2.2"
+    nanoid "^3.1.23"
+    source-map-js "^0.6.2"
+
+postcss@^8.3.0:
+  version "8.3.1"
+  resolved "https://registry.nlark.com/postcss/download/postcss-8.3.1.tgz?cache=0&sync_timestamp=1623282002530&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fpostcss%2Fdownload%2Fpostcss-8.3.1.tgz#71f380151c227f83b898294a46481f689f86b70a"
+  integrity sha1-cfOAFRwif4O4mClKRkgfaJ+Gtwo=
   dependencies:
     colorette "^1.2.2"
     nanoid "^3.1.23"
@@ -5912,10 +5921,10 @@ vfile@^4.0.0, vfile@^4.0.1:
     unist-util-stringify-position "^2.0.0"
     vfile-message "^2.0.0"
 
-vite-plugin-mock@^2.7.0:
-  version "2.7.0"
-  resolved "https://registry.nlark.com/vite-plugin-mock/download/vite-plugin-mock-2.7.0.tgz#21aec0397e29d013c87d765c56d177728d4288b4"
-  integrity sha1-Ia7AOX4p0BPIfXZcVtF3co1CiLQ=
+vite-plugin-mock@^2.7.2:
+  version "2.7.2"
+  resolved "https://registry.nlark.com/vite-plugin-mock/download/vite-plugin-mock-2.7.2.tgz#710fcbbf447d603d33de022d34f45b6a86de3613"
+  integrity sha1-cQ/Lv0R9YD0z3gItNPRbaobeNhM=
   dependencies:
     "@rollup/plugin-node-resolve" "^11.2.1"
     "@types/mockjs" "^1.0.3"
@@ -5951,13 +5960,13 @@ vite-plugin-svg-icons@^0.7.0:
     svg-baker "1.7.0"
     svgo "^2.3.0"
 
-vite@^2.3.6:
-  version "2.3.6"
-  resolved "https://registry.nlark.com/vite/download/vite-2.3.6.tgz?cache=0&sync_timestamp=1622612833176&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fvite%2Fdownload%2Fvite-2.3.6.tgz#1f7cfde88a51a802d69000c7bac85d481c2e871c"
-  integrity sha1-H3z96IpRqALWkADHushdSBwuhxw=
+vite@^2.3.7:
+  version "2.3.7"
+  resolved "https://registry.nlark.com/vite/download/vite-2.3.7.tgz#3023892419367465e1af1739578f8663d04243b2"
+  integrity sha1-MCOJJBk2dGXhrxc5V4+GY9BCQ7I=
   dependencies:
     esbuild "^0.12.5"
-    postcss "^8.2.10"
+    postcss "^8.3.0"
     resolve "^1.19.0"
     rollup "^2.38.5"
   optionalDependencies:
