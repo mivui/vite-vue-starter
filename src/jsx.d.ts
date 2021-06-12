@@ -19,7 +19,6 @@ interface JsxComponentCustomProps {
   vModel?: VueModel;
   vModels?: VueModel[];
   vHtml?: string | JSX.Element;
-  innerHTML?: string | JSX.Element;
 }
 
 declare module 'vue' {
