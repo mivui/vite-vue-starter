@@ -25,5 +25,11 @@ interface JsxComponentCustomProps extends Omit<HTMLAttributes, 'innerHTML'> {
 }
 
 declare module 'vue' {
+  interface InputHTMLAttributes extends JsxComponentCustomProps {}
+
+  interface SelectHTMLAttributes extends JsxComponentCustomProps {}
+
+  interface TextareaHTMLAttributes extends JsxComponentCustomProps {}
+
   interface ComponentCustomProps extends JsxComponentCustomProps {}
 }
