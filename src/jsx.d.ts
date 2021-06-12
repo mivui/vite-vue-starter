@@ -26,5 +26,5 @@ declare module 'vue' {
 
   interface ComponentCustomProps
     extends JsxComponentCustomProps,
-      Omit<HTMLAttributes, 'innerHTML'> {}
+      HTMLAttributes {}
 }
