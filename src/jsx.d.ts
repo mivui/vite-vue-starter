@@ -24,7 +24,5 @@ interface JsxComponentCustomProps {
 declare module 'vue' {
   interface HTMLAttributes extends JsxComponentCustomProps {}
 
-  interface ComponentCustomProps
-    extends JsxComponentCustomProps,
-      HTMLAttributes {}
+  interface ComponentCustomProps extends HTMLAttributes {}
 }
