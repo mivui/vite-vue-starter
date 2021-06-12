@@ -1,5 +1,3 @@
-import { HTMLAttributes } from '@vue/runtime-dom';
-
 export interface VueSlots<T = any> {
   [name: string]: (payload?: T) => JSX.Element;
 }
@@ -15,7 +13,7 @@ export declare type VueModel =
   | Record<string, unknown>
   | [unknown, string];
 
-interface JsxComponentCustomProps extends Omit<HTMLAttributes, 'innerHTML'> {
+interface JsxComponentCustomProps {
   vShow?: boolean;
   vSlots?: VueSlots;
   vModel?: VueModel;
@@ -25,11 +23,9 @@ interface JsxComponentCustomProps extends Omit<HTMLAttributes, 'innerHTML'> {
 }
 
 declare module 'vue' {
-  interface InputHTMLAttributes extends JsxComponentCustomProps {}
+  interface HTMLAttributes extends JsxComponentCustomProps {}
 
-  interface SelectHTMLAttributes extends JsxComponentCustomProps {}
-
-  interface TextareaHTMLAttributes extends JsxComponentCustomProps {}
-
-  interface ComponentCustomProps extends JsxComponentCustomProps {}
+  interface ComponentCustomProps
+    extends JsxComponentCustomProps,
+      Omit<HTMLAttributes, 'innerHTML'> {}
 }
