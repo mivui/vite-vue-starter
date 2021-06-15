@@ -44,7 +44,7 @@ module.exports = {
   //reference https://github.com/benmosher/eslint-plugin-import/issues/1615#issuecomment-577500405
   settings: {
     'import/parsers': {
-      '@typescript-eslint/parser': ['.ts', '.tsx'],
+      '@typescript-eslint/parser': ['.ts', '.d.ts', '.tsx'],
     },
     'import/extensions': ['.js', '.jsx', '.ts', '.d.ts', '.tsx', '.json'],
     'import/resolver': {
