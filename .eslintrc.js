@@ -36,24 +36,13 @@ module.exports = {
     '@typescript-eslint/no-empty-interface': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
-    'import/extensions': [
-      'error',
-      'ignorePackages',
-      {
-        js: 'never',
-        mjs: 'never',
-        jsx: 'never',
-        ts: 'never',
-        tsx: 'never',
-        vue: 'never',
-      },
-    ],
   },
   //reference https://github.com/benmosher/eslint-plugin-import/issues/1615#issuecomment-577500405
   settings: {
     'import/parsers': {
       '@typescript-eslint/parser': ['.ts', '.tsx'],
     },
+    'import/extensions': ['.js', '.jsx', '.ts', '.d.ts', '.tsx', '.json'],
     'import/resolver': {
       typescript: {},
     },
