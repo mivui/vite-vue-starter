@@ -5,6 +5,8 @@ module.exports = {
   },
   extends: [
     'airbnb-base',
+    'plugin:import/typescript',
+    'plugin:import/recommended',
     'plugin:vue/vue3-recommended',
     'plugin:prettier/recommended',
     'plugin:@typescript-eslint/recommended',
@@ -19,7 +21,7 @@ module.exports = {
     parser: '@typescript-eslint/parser',
     sourceType: 'module',
   },
-  plugins: ['vue', '@typescript-eslint', 'prettier'],
+  plugins: ['vue', '@typescript-eslint', 'import', 'prettier'],
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
