@@ -2,16 +2,17 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    'jest/globals': true,
   },
   extends: [
     'airbnb-base',
+    'plugin:jest/recommended',
     'plugin:import/typescript',
     'plugin:import/recommended',
     'plugin:vue/vue3-recommended',
     'plugin:prettier/recommended',
     'plugin:@typescript-eslint/recommended',
   ],
-  ignorePatterns: ['node_module', 'build', 'dist'],
   parser: 'vue-eslint-parser',
   parserOptions: {
     ecmaFeatures: {
@@ -21,12 +22,13 @@ module.exports = {
     parser: '@typescript-eslint/parser',
     sourceType: 'module',
   },
-  plugins: ['vue', '@typescript-eslint', 'import', 'prettier'],
+  plugins: ['vue', '@typescript-eslint', 'prettier', 'import', 'jest'],
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-unused-vars': 'off',
     'spaced-comment': 'off',
+    'import/named': 'off',
     'no-return-assign': 'off',
     'no-param-reassign': 'off',
     'consistent-return': 'off',
@@ -40,13 +42,23 @@ module.exports = {
     '@typescript-eslint/no-empty-interface': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        vue: 'never',
+        js: 'never',
+        mjs: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+      },
+    ],
   },
-  //reference https://github.com/benmosher/eslint-plugin-import/issues/1615#issuecomment-577500405
   settings: {
     'import/parsers': {
       '@typescript-eslint/parser': ['.ts', '.d.ts', '.tsx'],
     },
-    'import/extensions': ['.js', '.jsx', '.ts', '.d.ts', '.tsx', '.json'],
     'import/resolver': {
       typescript: {},
     },
