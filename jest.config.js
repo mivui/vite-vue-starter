@@ -1,4 +1,3 @@
-//yarn ts-jest config:init
 module.exports = {
   preset: 'ts-jest',
   clearMocks: true,
