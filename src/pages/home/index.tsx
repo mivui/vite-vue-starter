@@ -3,7 +3,7 @@ import Logo from '@/assets/logo.png';
 import styles from './style/index.module.less';
 
 export default defineComponent({
-  name: 'Index',
+  name: 'Home',
   setup() {
     document.title = import.meta.env.VITE_APP_TITLE;
 
