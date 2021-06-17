@@ -8,7 +8,7 @@ export const routes: Array<RouteRecordRaw> = [
   {
     path: '/index',
     name: 'index',
-    component: () => import('@/pages/main'),
+    component: () => import('@/pages/home'),
   },
   {
     path: '/test',
