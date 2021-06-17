@@ -16,8 +16,8 @@ export const routes: Array<RouteRecordRaw> = [
     component: () => import('@/pages/test/Test.vue'),
   },
   {
-    path: '/:catchAll(.*)',
-    name: 'notFond',
+    path: '/:pathMatch(.*)*',
+    name: 'NotFound',
     redirect: { name: 'index' },
   },
 ];
