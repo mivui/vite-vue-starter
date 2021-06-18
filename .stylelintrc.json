@@ -1,7 +1,7 @@
 {
   "extends": [
-   "stylelint-config-standard"
-  ,"stylelint-config-prettier"
+    "stylelint-config-standard",
+    "stylelint-config-prettier"
   ],
   "plugins": [
     "stylelint-order"
@@ -20,6 +20,14 @@
       {
         "ignorePseudoClasses": [
           "global"
+        ]
+      }
+    ],
+    "selector-pseudo-element-no-unknown": [
+      true,
+      {
+        "ignorePseudoClasses": [
+          "v-deep"
         ]
       }
     ]
