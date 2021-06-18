@@ -37,6 +37,7 @@ module.exports = {
     'no-underscore-dangle': 'off',
     'vue/require-default-prop': 'off',
     'prefer-promise-reject-errors': 'off',
+    'import/no-cycle': [2, { maxDepth: 1 }],
     'import/no-extraneous-dependencies': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/no-empty-function': 'off',
