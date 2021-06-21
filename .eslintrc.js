@@ -26,6 +26,7 @@ module.exports = {
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    'no-shadow': 'off',
     'default-case': 'off',
     'import/named': 'off',
     'no-unused-vars': 'off',
@@ -38,6 +39,7 @@ module.exports = {
     'vue/require-default-prop': 'off',
     'prefer-promise-reject-errors': 'off',
     'import/no-cycle': [2, { maxDepth: 1 }],
+    '@typescript-eslint/no-shadow': ['error'],
     'import/no-extraneous-dependencies': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/no-empty-function': 'off',
