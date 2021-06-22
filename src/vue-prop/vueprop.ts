@@ -1,10 +1,13 @@
 import { PropType } from 'vue';
 
-export interface VuePropType<T> {
+export interface AllPropType<T> {
   type: PropType<T>;
+  required: true;
 }
 
-export type RequiredPropType<T> = VuePropType<T> & { required: true };
+export type AnyPropType<T> = {
+  [P in keyof AllPropType<T> as Exclude<P, 'required'>]-?: AllPropType<T>[P];
+};
 
 export type PropConstructorType =
   | StringConstructor
@@ -26,7 +29,7 @@ export default class VueProp<T> {
 
   true() {
     this.required = true;
-    return this as unknown as RequiredPropType<T>;
+    return this as unknown as AllPropType<T>;
   }
 
   value(type: PropConstructorType | PropConstructorType[], value?: T) {
@@ -36,6 +39,6 @@ export default class VueProp<T> {
   }
 
   get() {
-    return this as unknown as VuePropType<T>;
+    return this as unknown as AnyPropType<T>;
   }
 }
