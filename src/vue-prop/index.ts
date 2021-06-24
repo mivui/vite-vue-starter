@@ -1,3 +1,4 @@
+import { CSSProperties } from 'vue';
 import VueProp from './vueprop';
 
 export function string(value?: string) {
@@ -44,4 +45,8 @@ export function vueNode(value?: string) {
 
 export function func<T = () => void>() {
   return new VueProp<T>().value(Function).get();
+}
+
+export function css() {
+  return new VueProp<CSSProperties>().value(Object).get();
 }

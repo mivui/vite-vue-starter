@@ -40,6 +40,7 @@ module.exports = {
     'prefer-promise-reject-errors': 'off',
     'import/prefer-default-export': 'off',
     'import/no-cycle': [2, { maxDepth: 1 }],
+    'vue/no-setup-props-destructure': 'warn',
     '@typescript-eslint/no-shadow': ['error'],
     'import/no-extraneous-dependencies': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
