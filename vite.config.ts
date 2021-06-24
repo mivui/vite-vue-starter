@@ -2,7 +2,12 @@ import { defineConfig } from 'vite';
 import { resolve } from 'path';
 import vue from '@vitejs/plugin-vue';
 import vueJsx from '@vitejs/plugin-vue-jsx';
-// import styleImport from 'vite-plugin-style-import';
+//load on demand
+// import ViteComponents, {
+//   AntDesignVueResolver,
+//   ElementPlusResolver,
+//   VantResolver,
+// } from 'vite-plugin-components';
 
 export default defineConfig({
   resolve: {
@@ -16,13 +21,11 @@ export default defineConfig({
   plugins: [
     vue(),
     vueJsx(),
-    // styleImport({
-    //   libs: [
-    //     {
-    //       libraryName: 'ant-design-vue',
-    //       esModule: true,
-    //       resolveStyle: (name) => `ant-design-vue/es/${name}/style/index`,
-    //     },
+    // ViteComponents({
+    //   customComponentResolvers: [
+    //     AntDesignVueResolver(),
+    //     ElementPlusResolver(),
+    //     VantResolver(),
     //   ],
     // }),
   ],
