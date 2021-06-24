@@ -5,9 +5,11 @@ export interface AllPropType<T> {
   required: true;
 }
 
-export type AnyPropType<T> = {
-  [P in keyof AllPropType<T> as Exclude<P, 'required'>]-?: AllPropType<T>[P];
+export type ExcludeRequired<T> = {
+  [P in keyof T as Exclude<P, 'required'>]-?: T[P];
 };
+
+export type AnyPropType<T> = ExcludeRequired<AllPropType<T>>;
 
 export type PropConstructorType =
   | StringConstructor

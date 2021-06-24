@@ -38,6 +38,7 @@ module.exports = {
     'no-underscore-dangle': 'off',
     'vue/require-default-prop': 'off',
     'prefer-promise-reject-errors': 'off',
+    'import/prefer-default-export': 'off',
     'import/no-cycle': [2, { maxDepth: 1 }],
     '@typescript-eslint/no-shadow': ['error'],
     'import/no-extraneous-dependencies': 'off',
