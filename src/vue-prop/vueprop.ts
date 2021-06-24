@@ -1,7 +1,7 @@
-import { PropType } from 'vue';
+import { PropType as VuePropType } from 'vue';
 
-export interface AllPropType<T> {
-  type: PropType<T>;
+export interface PropType<T> {
+  type: VuePropType<T>;
   required: true;
 }
 
@@ -9,7 +9,7 @@ export type ExcludeRequired<T> = {
   [P in keyof T as Exclude<P, 'required'>]-?: T[P];
 };
 
-export type AnyPropType<T> = ExcludeRequired<AllPropType<T>>;
+export type AnyPropType<T> = ExcludeRequired<PropType<T>>;
 
 export type PropConstructorType =
   | StringConstructor
@@ -22,7 +22,7 @@ export type PropConstructorType =
   | ArrayConstructor
   | FunctionConstructor;
 
-export default class VueProp<T> {
+export class VueProp<T> {
   private type?: unknown;
 
   private required?: boolean;
@@ -31,7 +31,7 @@ export default class VueProp<T> {
 
   true() {
     this.required = true;
-    return this as unknown as AllPropType<T>;
+    return this as unknown as PropType<T>;
   }
 
   value(type: PropConstructorType | PropConstructorType[], value?: T) {

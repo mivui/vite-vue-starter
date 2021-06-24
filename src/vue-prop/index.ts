@@ -1,5 +1,5 @@
 import { CSSProperties } from 'vue';
-import VueProp from './vueprop';
+import { VueProp } from './vueprop';
 
 export function string(value?: string) {
   return new VueProp<string>().value(String, value);
