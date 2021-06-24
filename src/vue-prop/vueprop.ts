@@ -1,9 +1,9 @@
 import { PropType as VuePropType } from 'vue';
 
-export interface PropType<T> {
+export type PropType<T> = {
   type: VuePropType<T>;
   required: true;
-}
+};
 
 export type ExcludeRequired<T> = {
   [P in keyof T as Exclude<P, 'required'>]-?: T[P];
