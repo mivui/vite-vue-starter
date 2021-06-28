@@ -1,13 +1,8 @@
 import { defineConfig } from 'vite';
 import { resolve } from 'path';
-import vue from '@vitejs/plugin-vue';
-import vueJsx from '@vitejs/plugin-vue-jsx';
-//load on demand
-// import ViteComponents, {
-//   AntDesignVueResolver,
-//   ElementPlusResolver,
-//   VantResolver,
-// } from 'vite-plugin-components';
+import Vue from '@vitejs/plugin-vue';
+import VueJsx from '@vitejs/plugin-vue-jsx';
+// import ViteStyleImport from 'vite-plugin-style-import';
 
 export default defineConfig({
   resolve: {
@@ -19,30 +14,20 @@ export default defineConfig({
     ],
   },
   plugins: [
-    vue(),
-    vueJsx(),
-    // ViteComponents({
-    //   customComponentResolvers: [
-    //     AntDesignVueResolver(),
-    //     ElementPlusResolver(),
-    //     VantResolver(),
+    Vue(),
+    VueJsx(),
+    // ViteStyleImport({
+    //   libs: [
+    //     {
+    //       libraryName: 'ant-design-vue',
+    //       esModule: true,
+    //       resolveStyle: (name) => {
+    //         return `ant-design-vue/es/${name}/style/index`;
+    //       },
+    //     },
     //   ],
     // }),
   ],
-  server: {
-    host: '0.0.0.0',
-    port: 80,
-    https: false,
-    open: false,
-    cors: true,
-    // proxy: {
-    //   '/api': {
-    //     target: 'http://127.0.0.1:8080',
-    //     changeOrigin: true,
-    //     rewrite: (path) => path.replace(/^\/api/, ''),
-    //   },
-    // },
-  },
   css: {
     preprocessorOptions: {
       less: {
@@ -58,5 +43,19 @@ export default defineConfig({
     outDir: 'dist',
     assetsDir: 'assets',
     sourcemap: false,
+  },
+  server: {
+    host: '0.0.0.0',
+    port: 80,
+    https: false,
+    open: false,
+    cors: true,
+    // proxy: {
+    //   '/api': {
+    //     target: 'http://127.0.0.1:8080',
+    //     changeOrigin: true,
+    //     rewrite: (path) => path.replace(/^\/api/, ''),
+    //   },
+    // },
   },
 });
