@@ -1,17 +1,19 @@
 import { PropType as VuePropType } from 'vue';
 
-export type PropType<T> = {
+type BasePropType<T> = {
   type: VuePropType<T>;
-  required: true;
+  required: boolean;
 };
 
-export type ExcludeRequired<T> = {
-  [P in keyof T as Exclude<P, 'required'>]-?: T[P];
+type ExcludeValue = 'default' | 'true' | 'get' | 'value';
+
+type ExcludePropType<T> = {
+  -readonly [K in keyof T as Exclude<K, ExcludeValue>]-?: T[K];
 };
 
-export type AnyPropType<T> = ExcludeRequired<PropType<T>>;
+export type PropType<T> = ExcludePropType<BasePropType<T>>;
 
-export type PropConstructorType =
+type PropConstructor =
   | StringConstructor
   | NumberConstructor
   | BooleanConstructor
@@ -22,25 +24,30 @@ export type PropConstructorType =
   | ArrayConstructor
   | FunctionConstructor;
 
+export type PropConstructorType = PropConstructor | PropConstructor[];
+
 export class VueProp<T> {
-  private type?: unknown;
+  private type: PropConstructorType;
 
   private required?: boolean;
 
   private default?: unknown;
 
-  true() {
-    this.required = true;
-    return this as unknown as PropType<T>;
+  constructor(type: PropConstructorType) {
+    this.type = type;
   }
 
-  value(type: PropConstructorType | PropConstructorType[], value?: T) {
-    this.type = type;
+  true() {
+    this.required = true;
+    return this as unknown as PropType<T> & { required: true };
+  }
+
+  value(value?: T) {
     if (value !== undefined) this.default = value;
     return this;
   }
 
   get() {
-    return this as unknown as AnyPropType<T>;
+    return this as unknown as PropType<T>;
   }
 }
