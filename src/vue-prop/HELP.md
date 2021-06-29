@@ -5,5 +5,6 @@ const props = {
   test: string().get(), //{type:[String]}
   title: func<() => void>(), //{type:Function as PropType<()=>void>}
   content: vueNode(), //{type:[Object,String] as PropType<JSX.Element|null|string>}
+  style: css({ height:'20px' }), //{type:[Object] as PropType<CSSProperties>}
 };
 ```
