@@ -1,19 +1,8 @@
 import { PropType as VuePropType } from 'vue';
 
-type BasePropType<T> = {
+export type PropType<T> = {
   type: VuePropType<T>;
-  required: boolean;
-  default: unknown;
 };
-
-type ExcludePropType<T> = {
-  -readonly [K in keyof T as Exclude<
-    K,
-    'define' | 'requiredProp' | 'prop'
-  >]-?: T[K];
-};
-
-export type PropType<T> = ExcludePropType<BasePropType<T>>;
 
 type PropConstructor =
   | StringConstructor
