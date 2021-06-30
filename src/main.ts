@@ -1,6 +1,6 @@
 import { createApp } from 'vue';
 import router from '@/router';
-import vuex from '@/store';
+import { createPinia } from 'pinia';
 import App from './App';
 
-createApp(App).use(router).use(vuex).mount('#app');
+createApp(App).use(router).use(createPinia()).mount('#app');

@@ -1758,7 +1758,7 @@
     "@vue/compiler-dom" "3.1.2"
     "@vue/shared" "3.1.2"
 
-"@vue/devtools-api@^6.0.0-beta.11", "@vue/devtools-api@^6.0.0-beta.14":
+"@vue/devtools-api@^6.0.0-beta.14":
   version "6.0.0-beta.14"
   resolved "https://registry.nlark.com/@vue/devtools-api/download/@vue/devtools-api-6.0.0-beta.14.tgz?cache=0&sync_timestamp=1623239431123&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40vue%2Fdevtools-api%2Fdownload%2F%40vue%2Fdevtools-api-6.0.0-beta.14.tgz#6ed2d6f8d66a9256c9ad04bfff08309ba87b9723"
   integrity sha1-btLW+NZqklbJrQS//wgwm6h7lyM=
@@ -2037,13 +2037,6 @@ autoprefixer@^9.8.6:
     num2fraction "^1.2.2"
     postcss "^7.0.32"
     postcss-value-parser "^4.1.0"
-
-axios@^0.21.1:
-  version "0.21.1"
-  resolved "https://registry.nlark.com/axios/download/axios-0.21.1.tgz#22563481962f4d6bde9a76d516ef0e5d3c09b2b8"
-  integrity sha1-IlY0gZYvTWvemnbVFu8OXTwJsrg=
-  dependencies:
-    follow-redirects "^1.10.0"
 
 babel-jest@^26.6.3:
   version "26.6.3"
@@ -3593,11 +3586,6 @@ fn-name@^2.0.1:
   version "2.0.1"
   resolved "https://registry.npm.taobao.org/fn-name/download/fn-name-2.0.1.tgz#5214d7537a4d06a4a301c0cc262feb84188002e7"
   integrity sha1-UhTXU3pNBqSjAcDMJi/rhBiAAuc=
-
-follow-redirects@^1.10.0:
-  version "1.14.1"
-  resolved "https://registry.nlark.com/follow-redirects/download/follow-redirects-1.14.1.tgz?cache=0&sync_timestamp=1620555246888&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ffollow-redirects%2Fdownload%2Ffollow-redirects-1.14.1.tgz#d9114ded0a1cfdd334e164e6662ad02bfd91ff43"
-  integrity sha1-2RFN7Qoc/dM04WTmZirQK/2R/0M=
 
 for-in@^1.0.2:
   version "1.0.2"
@@ -5999,6 +5987,13 @@ pify@^4.0.1:
   resolved "https://registry.npm.taobao.org/pify/download/pify-4.0.1.tgz#4b2cd25c50d598735c50292224fd8c6df41e3231"
   integrity sha1-SyzSXFDVmHNcUCkiJP2MbfQeMjE=
 
+pinia@^2.0.0-beta.3:
+  version "2.0.0-beta.3"
+  resolved "https://registry.nlark.com/pinia/download/pinia-2.0.0-beta.3.tgz#c6f0d07da54dc5aa237f4cc9281898e927b33d16"
+  integrity sha1-xvDQfaVNxaojf0zJKBiY6SezPRY=
+  dependencies:
+    "@vue/devtools-api" "^6.0.0-beta.14"
+
 pirates@^4.0.1:
   version "4.0.1"
   resolved "https://registry.npm.taobao.org/pirates/download/pirates-4.0.1.tgz#643a92caf894566f91b2b986d2c66950a8e2fb87"
@@ -8154,13 +8149,6 @@ vue@^3.1.2:
     "@vue/compiler-dom" "3.1.2"
     "@vue/runtime-dom" "3.1.2"
     "@vue/shared" "3.1.2"
-
-vuex@^4.0.2:
-  version "4.0.2"
-  resolved "https://registry.nlark.com/vuex/download/vuex-4.0.2.tgz#f896dbd5bf2a0e963f00c67e9b610de749ccacc9"
-  integrity sha1-+Jbb1b8qDpY/AMZ+m2EN50nMrMk=
-  dependencies:
-    "@vue/devtools-api" "^6.0.0-beta.11"
 
 w3c-hr-time@^1.0.2:
   version "1.0.2"
