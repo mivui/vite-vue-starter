@@ -1,8 +1,4 @@
-import { PropType as VuePropType } from 'vue';
-
-export type PropType<T> = {
-  type: VuePropType<T>;
-};
+import { PropType } from 'vue';
 
 type PropConstructor =
   | StringConstructor
@@ -37,7 +33,7 @@ export class VueProp<T> {
     return this as unknown as PropType<T>;
   }
 
-  requiredProp() {
+  mustProp() {
     this.required = true;
     return this as unknown as PropType<T> & { required: true };
   }
