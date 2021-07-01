@@ -11,7 +11,7 @@ export default defineComponent({
       return (
         <div class={styles.helloWorld}>
           <img src={Logo} alt="Vue" />
-          <div>Hello World!</div>
+          <div style={{ marginLeft: '13px' }}>Hello World!</div>
         </div>
       );
     };
