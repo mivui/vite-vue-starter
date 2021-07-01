@@ -18,7 +18,7 @@ export class VueProp<T> {
 
   private required?: boolean;
 
-  private default?: unknown;
+  private default?: T;
 
   constructor(type: PropConstructorType) {
     this.type = type;
