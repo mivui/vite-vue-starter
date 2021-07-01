@@ -29,12 +29,16 @@ export class VueProp<T> {
     return this;
   }
 
-  prop() {
-    return this as unknown as PropType<T>;
+  get prop() {
+    return this as unknown as PropType<T> & ThisType<void>;
   }
 
-  mustProp() {
+  get mustProp() {
     this.required = true;
     return this as unknown as PropType<T> & { required: true };
   }
+}
+
+export function useProp<T>(type: PropConstructorType) {
+  return new VueProp<T>(type);
 }
