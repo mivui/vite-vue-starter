@@ -33,9 +33,9 @@ export class VueProp<T> {
     return this as unknown as PropType<T> & ThisType<void>;
   }
 
-  get mustProp() {
+  get requiredProp() {
     this.required = true;
-    return this as unknown as PropType<T> & { required: true };
+    return this as unknown as PropType<T> & { required: true } & ThisType<void>;
   }
 }
 
