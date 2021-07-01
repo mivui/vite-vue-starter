@@ -1448,7 +1448,7 @@
   resolved "https://registry.nlark.com/@types/node/download/@types/node-15.12.5.tgz#9a78318a45d75c9523d2396131bd3cca54b2d185"
   integrity sha1-mngxikXXXJUj0jlhMb08ylSy0YU=
 
-"@types/node@^14.17.3":
+"@types/node@^14.17.4":
   version "14.17.4"
   resolved "https://registry.nlark.com/@types/node/download/@types/node-14.17.4.tgz#218712242446fc868d0e007af29a4408c7765bc0"
   integrity sha1-IYcSJCRG/IaNDgB68ppECMd2W8A=
@@ -7550,10 +7550,10 @@ typescript-vscode-sh-plugin@^0.6.14:
   resolved "https://registry.nlark.com/typescript-vscode-sh-plugin/download/typescript-vscode-sh-plugin-0.6.14.tgz#a81031b502f6346a26ea49ce082438c3e353bb38"
   integrity sha1-qBAxtQL2NGom6knOCCQ4w+NTuzg=
 
-typescript@^4.3.4:
-  version "4.3.4"
-  resolved "https://registry.nlark.com/typescript/download/typescript-4.3.4.tgz?cache=0&sync_timestamp=1624778394452&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ftypescript%2Fdownload%2Ftypescript-4.3.4.tgz#3f85b986945bcf31071decdd96cf8bfa65f9dcbc"
-  integrity sha1-P4W5hpRbzzEHHezdls+L+mX53Lw=
+typescript@^4.3.5:
+  version "4.3.5"
+  resolved "https://registry.nlark.com/typescript/download/typescript-4.3.5.tgz#4d1c37cc16e893973c45a06886b7113234f119f4"
+  integrity sha1-TRw3zBbok5c8RaBohrcRMjTxGfQ=
 
 unbox-primitive@^1.0.1:
   version "1.0.1"
