@@ -1,54 +1,55 @@
 import { CSSProperties } from 'vue';
 import { useProp } from './vue-prop';
 
-class PropType {
-  static get string() {
-    return useProp<string>(String);
-  }
+const vueProp = (() =>
+  class PropType {
+    static get string() {
+      return useProp<string>(String);
+    }
 
-  static get number() {
-    return useProp<number>(Number);
-  }
+    static get number() {
+      return useProp<number>(Number);
+    }
 
-  static get bigint() {
-    return useProp<bigint>(BigInt);
-  }
+    static get bigint() {
+      return useProp<bigint>(BigInt);
+    }
 
-  static get stringNumber() {
-    return useProp<number | string>([Number, String]);
-  }
+    static get stringNumber() {
+      return useProp<number | string>([Number, String]);
+    }
 
-  static get boolean() {
-    return useProp<boolean>(Boolean);
-  }
+    static get boolean() {
+      return useProp<boolean>(Boolean);
+    }
 
-  static get symbol() {
-    return useProp<symbol>(Symbol);
-  }
+    static get symbol() {
+      return useProp<symbol>(Symbol);
+    }
 
-  static get date() {
-    return useProp<Date>(Date);
-  }
+    static get date() {
+      return useProp<Date>(Date);
+    }
 
-  static get vueNode() {
-    return useProp<JSX.Element | string | null>([String, Object]);
-  }
+    static get vueNode() {
+      return useProp<JSX.Element | string | null>([String, Object]);
+    }
 
-  static get css() {
-    return useProp<CSSProperties>(Object);
-  }
+    static get css() {
+      return useProp<CSSProperties>(Object);
+    }
 
-  static object<T>() {
-    return useProp<T>(Object);
-  }
+    static object<T>() {
+      return useProp<T>(Object);
+    }
 
-  static array<T>() {
-    return useProp<Array<T>>(Array);
-  }
+    static array<T>() {
+      return useProp<Array<T>>(Array);
+    }
 
-  static func<T = () => void>() {
-    return useProp<T>(Function);
-  }
-}
+    static func<T = () => void>() {
+      return useProp<T>(Function);
+    }
+  })();
 
-export { PropType as prop };
+export default vueProp;
