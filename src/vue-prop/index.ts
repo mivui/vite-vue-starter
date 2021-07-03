@@ -39,11 +39,11 @@ const vueProp = (() =>
       return useProp<CSSProperties>(Object);
     }
 
-    static object<T>() {
+    static object<T = Record<any, unknown>>() {
       return useProp<T>(Object);
     }
 
-    static array<T>() {
+    static array<T = unknown>() {
       return useProp<Array<T>>(Array);
     }
 
