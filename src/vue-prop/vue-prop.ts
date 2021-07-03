@@ -21,11 +21,11 @@ type PropConstructor =
 export type VuePropType = PropConstructor | PropConstructor[] | true | null;
 
 export class VueProp<T> {
-  type: VuePropType;
+  private type: VuePropType;
 
-  required?: boolean;
+  private required?: boolean;
 
-  default?: DefaultType<T>;
+  private default?: DefaultType<T>;
 
   validator?(value: unknown): boolean;
 
