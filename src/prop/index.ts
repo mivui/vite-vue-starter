@@ -43,7 +43,7 @@ export const define = (() =>
       return useProp<T>(Object);
     }
 
-    static array<T = unknown>() {
+    static array<T = Record<any, unknown>>() {
       return useProp<Array<T>>(Array);
     }
 
