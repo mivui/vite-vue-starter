@@ -2,7 +2,7 @@
 import { define } from '@/prop';
 
 const props = {
-  name: define.stringNumber.value('123').trueProp,
+  name: define.stringNumber.value('123').isRequired,
   //{type:[String,Number],required:true,default:123}
   test: define.string.prop,
   //{type:String}

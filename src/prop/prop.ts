@@ -1,4 +1,4 @@
-import { PropType } from 'vue';
+import { Prop as VueProp } from 'vue';
 
 type DefaultType<T> =
   | T
@@ -21,7 +21,7 @@ type PropConstructor =
 export type VuePropType = PropConstructor | PropConstructor[] | true | null;
 
 export class Prop<T> {
-  private type: VuePropType;
+  private type?: VuePropType;
 
   private required?: boolean;
 
@@ -43,13 +43,13 @@ export class Prop<T> {
     return this;
   }
 
-  get trueProp() {
+  get isRequired() {
     this.required = true;
-    return this as unknown as PropType<T> & { required: true };
+    return this as unknown as VueProp<T> & { required: true };
   }
 
   get prop() {
-    return this as unknown as PropType<T> & { required: false };
+    return this as unknown as VueProp<T> & { required: false };
   }
 }
 
