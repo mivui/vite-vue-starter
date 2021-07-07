@@ -1,7 +1,7 @@
 import { CSSProperties } from 'vue';
 import { useProp } from './vue-prop';
 
-const vueProp = (() =>
+const defineProp = (() =>
   class PropType {
     static get string() {
       return useProp<string>(String);
@@ -52,4 +52,4 @@ const vueProp = (() =>
     }
   })();
 
-export default vueProp;
+export default defineProp;
