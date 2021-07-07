@@ -20,7 +20,7 @@ type PropConstructor =
 
 export type VuePropType = PropConstructor | PropConstructor[] | true | null;
 
-export class VueProp<T> {
+export class Prop<T> {
   private type: VuePropType;
 
   private required?: boolean;
@@ -54,5 +54,5 @@ export class VueProp<T> {
 }
 
 export function useProp<T>(type: VuePropType) {
-  return new VueProp<T>(type);
+  return new Prop<T>(type);
 }

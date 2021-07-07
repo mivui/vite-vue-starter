@@ -1,8 +1,8 @@
 import { CSSProperties } from 'vue';
-import { useProp } from './vue-prop';
+import { useProp } from './prop';
 
 export const define = (() =>
-  class PropType {
+  class DefineProp {
     static get string() {
       return useProp<string>(String);
     }

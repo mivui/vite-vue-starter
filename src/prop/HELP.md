@@ -1,5 +1,5 @@
 ```ts
-import { define } from '@/vue-prop';
+import { define } from '@/prop';
 
 const props = {
   name: define.stringNumber.value('123').trueProp,
