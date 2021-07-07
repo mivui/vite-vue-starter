@@ -2,7 +2,7 @@
 import vueProp from '@/vue-prop';
 
 const props = {
-  name: vueProp.stringNumber.define('123').trueProp,
+  name: vueProp.stringNumber.value('123').trueProp,
   //{type:[String,Number],required:true,default:123}
   test: vueProp.string.prop,
   //{type:String}
@@ -12,7 +12,7 @@ const props = {
   //{type:Function as PropType<()=>void>}
   content: vueProp.vueNode.prop,
   //{type:[Object,String] as PropType<JSX.Element|null|string>}
-  style: vueProp.css.define({ height:'20px' }).prop,
+  style: vueProp.css.value({ height:'20px' }).prop,
   //{type: Object as PropType<CSSProperties>,default:{ height:'20px' }}
 };
 ```

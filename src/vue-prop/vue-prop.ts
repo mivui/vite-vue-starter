@@ -33,7 +33,7 @@ export class VueProp<T> {
     this.type = type;
   }
 
-  define(value?: T) {
+  value(value?: T) {
     this.default = value;
     return this;
   }
