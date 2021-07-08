@@ -1,4 +1,4 @@
-import { Prop as VueProp } from 'vue';
+import { Prop as VueProp, PropType } from 'vue';
 
 type DefaultType<T> =
   | T
@@ -7,33 +7,27 @@ type DefaultType<T> =
   | undefined
   | Record<string, unknown>;
 
-type PropConstructor =
-  | StringConstructor
-  | NumberConstructor
-  | BooleanConstructor
-  | DateConstructor
-  | BigIntConstructor
-  | SymbolConstructor
-  | ObjectConstructor
-  | ArrayConstructor
-  | FunctionConstructor;
+export type VuePropType<T> =
+  | PropType<T>
+  | true
+  | null
+  | FunctionConstructor
+  | BigIntConstructor;
 
-export type VuePropType = PropConstructor | PropConstructor[] | true | null;
+export class Prop<T = any, D = T> {
+  readonly type?: VuePropType<T>;
 
-export class Prop<T> {
-  private type?: VuePropType;
+  required?: boolean;
 
-  private required?: boolean;
-
-  private default?: DefaultType<T>;
+  default?: DefaultType<D>;
 
   validator?(value: unknown): boolean;
 
-  constructor(type: VuePropType) {
+  constructor(type: VuePropType<T>) {
     this.type = type;
   }
 
-  value(value?: T) {
+  value(value?: D) {
     this.default = value;
     return this;
   }
@@ -45,14 +39,14 @@ export class Prop<T> {
 
   get isRequired() {
     this.required = true;
-    return this as unknown as VueProp<T> & { required: true };
+    return this as VueProp<T> & { required: true };
   }
 
   get prop() {
-    return this as unknown as VueProp<T> & { required: false };
+    return this as VueProp<T> & { required: false };
   }
 }
 
-export function useProp<T>(type: VuePropType) {
+export function useProp<T>(type: VuePropType<T>) {
   return new Prop<T>(type);
 }
