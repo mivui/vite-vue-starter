@@ -1,4 +1,4 @@
-export interface VueSlots<T = any> {
+export declare interface VueSlots<T = any> {
   [name: string]: (payload: T) => JSX.Element | null;
 }
 
@@ -13,7 +13,7 @@ export declare type VueModel =
   | Record<string, unknown>
   | [unknown, string];
 
-interface JsxComponentCustomProps {
+declare interface JsxComponentCustomProps {
   vShow?: boolean;
   vSlots?: VueSlots;
   vModel?: VueModel;
