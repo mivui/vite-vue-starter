@@ -51,25 +51,7 @@ module.exports = {
     '@typescript-eslint/no-empty-interface': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
-    'import/extensions': [
-      'error',
-      'ignorePackages',
-      {
-        vue: 'never',
-        js: 'never',
-        mjs: 'never',
-        jsx: 'never',
-        ts: 'never',
-        tsx: 'never',
-      },
-    ],
-  },
-  settings: {
-    'import/parsers': {
-      '@typescript-eslint/parser': ['.ts', '.tsx'],
-    },
-    'import/resolver': {
-      typescript: {},
-    },
+    'import/extensions': 'off',
+    'import/no-unresolved': 'off',
   },
 };
