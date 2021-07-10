@@ -15,12 +15,13 @@ module.exports = {
   ],
   parser: 'vue-eslint-parser',
   parserOptions: {
+    parser: '@typescript-eslint/parser',
     ecmaFeatures: {
       jsx: true,
     },
     ecmaVersion: 12,
-    parser: '@typescript-eslint/parser',
     sourceType: 'module',
+    extraFileExtensions: ['.vue'],
   },
   plugins: ['vue', '@typescript-eslint', 'prettier', 'import', 'jest'],
   rules: {
