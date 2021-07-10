@@ -1,5 +1,5 @@
 export interface VueSlots<T = any> {
-  [name: string]: (payload?: T) => JSX.Element | null;
+  [name: string]: (payload: T) => JSX.Element | null;
 }
 
 export declare type VueModel =
