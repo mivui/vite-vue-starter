@@ -2,8 +2,6 @@
   <div>HelloWorld</div>
 </template>
 
-<script>
-export default {
-  name: 'HelloWorld',
-};
+<script setup lang="ts">
+import { defineProps } from 'vue';
 </script>

@@ -6,7 +6,6 @@ module.exports = {
   coverageDirectory: 'coverage',
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
-    '\\.(css|less|scss|sass|styl)$': 'identity-obj-proxy',
   },
   testMatch: [
     '**/__tests__/**/*.+(js|ts|tsx)',

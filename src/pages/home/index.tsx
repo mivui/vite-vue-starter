@@ -1,6 +1,6 @@
 import { defineComponent } from 'vue';
 import Logo from '@/assets/logo.png';
-import styles from './style/index.module.less';
+import styles from './style/index.module.scss';
 
 export default defineComponent({
   name: 'Home',

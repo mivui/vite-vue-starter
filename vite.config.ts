@@ -2,7 +2,8 @@ import { defineConfig } from 'vite';
 import { resolve } from 'path';
 import Vue from '@vitejs/plugin-vue';
 import VueJsx from '@vitejs/plugin-vue-jsx';
-// import ViteStyleImport from 'vite-plugin-style-import';
+import VuePresetEnv from '@vitejs/plugin-legacy';
+import VueStyleImport from 'vite-plugin-style-import';
 
 export default defineConfig({
   resolve: {
@@ -16,24 +17,31 @@ export default defineConfig({
   plugins: [
     Vue(),
     VueJsx(),
-    // ViteStyleImport({
-    //   libs: [
-    //     {
-    //       libraryName: 'ant-design-vue',
-    //       esModule: true,
-    //       resolveStyle: (name) => {
-    //         return `ant-design-vue/es/${name}/style/index`;
-    //       },
-    //     },
-    //   ],
-    // }),
+    VuePresetEnv({
+      targets: ['ie >= 11'],
+      additionalLegacyPolyfills: [
+        'core-js/stable',
+        'regenerator-runtime/runtime',
+      ],
+    }),
+    VueStyleImport({
+      libs: [
+        {
+          libraryName: 'element-plus',
+          esModule: true,
+          ensureStyleFile: true,
+          resolveStyle: (name) => {
+            name = name.slice(3);
+            return `element-plus/packages/theme-chalk/src/${name}.scss`;
+          },
+          resolveComponent: (name) => {
+            return `element-plus/lib/${name}`;
+          },
+        },
+      ],
+    }),
   ],
   css: {
-    preprocessorOptions: {
-      less: {
-        javascriptEnabled: true,
-      },
-    },
     modules: {
       localsConvention: 'camelCase',
     },
