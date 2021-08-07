@@ -3,5 +3,18 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps } from 'vue';
+interface Props {
+  foo: string;
+  bar?: number;
+}
+
+interface Emits {
+  (e: 'change', id: number): void;
+  (e: 'update', value: string): void;
+}
+
+const props = defineProps<Props>();
+
+const emit = defineEmits<Emits>();
+emit('change', 1);
 </script>

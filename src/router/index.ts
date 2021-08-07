@@ -11,11 +11,6 @@ export const routes: Array<RouteRecordRaw> = [
     component: () => import('@/pages/home'),
   },
   {
-    path: '/test',
-    name: 'test',
-    component: () => import('@/pages/test/Test.vue'),
-  },
-  {
     path: '/:pathMatch(.*)*',
     name: 'NotFound',
     redirect: { name: 'index' },
