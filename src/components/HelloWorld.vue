@@ -1,20 +1,21 @@
 <template>
-  <div>HelloWorld</div>
+  <div>{{ props.bar }}</div>
 </template>
 
 <script setup lang="ts">
-interface Props {
+export interface CustomProps {
   foo: string;
   bar?: number;
 }
 
-interface Emits {
+export interface CustomEmits {
   (e: 'change', id: number): void;
   (e: 'update', value: string): void;
 }
 
-const props = defineProps<Props>();
+const props = defineProps<CustomProps>();
+withDefaults(props, { foo: 'HelloWord' });
 
-const emit = defineEmits<Emits>();
+const emit = defineEmits<CustomEmits>();
 emit('change', 1);
 </script>
