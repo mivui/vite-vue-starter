@@ -18,11 +18,7 @@ export default defineConfig({
     Vue(),
     VueJsx(),
     VuePresetEnv({
-      targets: ['ie >= 11'],
-      additionalLegacyPolyfills: [
-        'core-js/stable',
-        'regenerator-runtime/runtime',
-      ],
+      targets: ['> 0.07%', 'not IE 11', 'not dead'],
     }),
     VueStyleImport({
       libs: [
