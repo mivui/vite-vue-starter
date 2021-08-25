@@ -1,21 +1,15 @@
 <template>
-  <div>{{ props.bar }}</div>
+  <div>{{ state.title }}</div>
 </template>
 
-<script setup lang="ts">
-export interface CustomProps {
-  foo: string;
-  bar?: number;
-}
+<script lang="ts">
+import { defineComponent, reactive } from 'vue';
 
-export interface CustomEmits {
-  (e: 'change', id: number): void;
-  (e: 'update', value: string): void;
-}
-
-const props = defineProps<CustomProps>();
-withDefaults(props, { foo: 'HelloWord' });
-
-const emit = defineEmits<CustomEmits>();
-emit('change', 1);
+export default defineComponent({
+  name: 'HelloWord',
+  setup() {
+    const state = reactive({ title: 'HelloWord' });
+    return { state };
+  },
+});
 </script>

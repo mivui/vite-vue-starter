@@ -2,8 +2,8 @@ import { defineConfig } from 'vite';
 import { resolve } from 'path';
 import Vue from '@vitejs/plugin-vue';
 import VueJsx from '@vitejs/plugin-vue-jsx';
-import VuePresetEnv from '@vitejs/plugin-legacy';
-import VueStyleImport from 'vite-plugin-style-import';
+import VitePresetEnv from '@vitejs/plugin-legacy';
+import ViteStyleImport from 'vite-plugin-style-import';
 
 export default defineConfig({
   resolve: {
@@ -17,10 +17,10 @@ export default defineConfig({
   plugins: [
     Vue(),
     VueJsx(),
-    VuePresetEnv({
+    VitePresetEnv({
       targets: ['> 0.07%', 'not IE 11', 'not dead'],
     }),
-    VueStyleImport({
+    ViteStyleImport({
       libs: [
         {
           libraryName: 'element-plus',
