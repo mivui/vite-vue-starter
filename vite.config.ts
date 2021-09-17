@@ -3,7 +3,8 @@ import { resolve } from 'path';
 import Vue from '@vitejs/plugin-vue';
 import VueJsx from '@vitejs/plugin-vue-jsx';
 import VitePresetEnv from '@vitejs/plugin-legacy';
-import ViteStyleImport from 'vite-plugin-style-import';
+import Components from 'unplugin-vue-components/vite';
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers';
 
 export default defineConfig({
   resolve: {
@@ -20,10 +21,8 @@ export default defineConfig({
     VitePresetEnv({
       targets: ['> 0.07%', 'not IE 11', 'not dead'],
     }),
-    ViteStyleImport({
-      libs: [
-        // add ui library
-      ],
+    Components({
+      resolvers: [ElementPlusResolver()],
     }),
   ],
   css: {
