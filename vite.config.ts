@@ -19,7 +19,7 @@ export default defineConfig({
     Vue(),
     VueJsx(),
     VitePresetEnv({
-      targets: ['> 0.07%', 'not IE 11', 'not dead'],
+      targets: { chrome: '51', firefox: '54' },
     }),
     Components({
       resolvers: [ElementPlusResolver()],
