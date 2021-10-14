@@ -22,7 +22,7 @@ export default defineConfig({
       targets: { chrome: '51', firefox: '54' },
     }),
     Components({
-      resolvers: [ElementPlusResolver()],
+      resolvers: [ElementPlusResolver({ importStyle: 'sass' })],
     }),
   ],
   css: {

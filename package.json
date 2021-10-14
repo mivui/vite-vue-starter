@@ -7,7 +7,7 @@
     "build": "vue-tsc --noEmit && vite build",
     "serve": "vite preview",
     "eslint": "eslint --fix",
-    "stylelint": "stylelint **/*.{css,less,sass,scss,stylus}",
+    "stylelint": "stylelint **/*.{css,less,sass,scss}",
     "test": "jest"
   },
   "dependencies": {
