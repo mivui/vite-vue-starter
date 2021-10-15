@@ -9,6 +9,7 @@
   ],
   "rules": {
     "at-rule-no-unknown": null,
+    "selector-pseudo-element-no-unknown": null,
     "scss/at-rule-no-unknown": true,
     "order/order": [
       "custom-properties",
@@ -23,14 +24,6 @@
       {
         "ignorePseudoClasses": [
           "global"
-        ]
-      }
-    ],
-    "selector-pseudo-element-no-unknown": [
-      true,
-      {
-        "ignorePseudoClasses": [
-          "v-deep"
         ]
       }
     ]
