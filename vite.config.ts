@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 import { resolve } from 'path';
 import Vue from '@vitejs/plugin-vue';
 import VueJsx from '@vitejs/plugin-vue-jsx';
-import VitePresetEnv from '@vitejs/plugin-legacy';
+import Legacy from '@vitejs/plugin-legacy';
 import Components from 'unplugin-vue-components/vite';
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers';
 
@@ -18,7 +18,7 @@ export default defineConfig({
   plugins: [
     Vue(),
     VueJsx(),
-    VitePresetEnv({
+    Legacy({
       targets: { chrome: '49', firefox: '18' },
     }),
     Components({
