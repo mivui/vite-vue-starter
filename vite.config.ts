@@ -19,7 +19,7 @@ export default defineConfig({
     Vue(),
     VueJsx(),
     VitePresetEnv({
-      targets: { chrome: '51', firefox: '54' },
+      targets: { chrome: '49', firefox: '18' },
     }),
     Components({
       resolvers: [ElementPlusResolver({ importStyle: 'sass' })],
