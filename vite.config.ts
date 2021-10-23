@@ -3,8 +3,8 @@ import { resolve } from 'path';
 import Vue from '@vitejs/plugin-vue';
 import VueJsx from '@vitejs/plugin-vue-jsx';
 import Legacy from '@vitejs/plugin-legacy';
-import Components from 'unplugin-vue-components/vite';
-import { ElementPlusResolver } from 'unplugin-vue-components/resolvers';
+// import Components from 'unplugin-vue-components/vite';
+// import { ElementPlusResolver } from 'unplugin-vue-components/resolvers';
 
 export default defineConfig({
   resolve: {
@@ -21,9 +21,9 @@ export default defineConfig({
     Legacy({
       targets: { chrome: '49', firefox: '18' },
     }),
-    Components({
-      resolvers: [ElementPlusResolver({ importStyle: 'sass' })],
-    }),
+    // Components({
+    //   resolvers: [ElementPlusResolver({ importStyle: 'sass' })],
+    // }),
   ],
   css: {
     modules: {
