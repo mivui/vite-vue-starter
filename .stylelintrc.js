@@ -1,16 +1,9 @@
 module.exports = {
   extends: [
-    'stylelint-config-html',
+    'stylelint-config-prettier',
     'stylelint-config-recommended',
     'stylelint-config-standard-scss',
-  ],
-  overrides: [
-    {
-      files: ['*.vue', '**/*.vue'],
-      rules: {
-        'unit-allowed-list': ['em', 'rem', 's'],
-      },
-    },
+    'stylelint-config-recommended-vue',
   ],
   rules: {
     'at-rule-no-unknown': null,
