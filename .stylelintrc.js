@@ -14,7 +14,7 @@ module.exports = {
   ],
   rules: {
     'at-rule-no-unknown': null,
-    'scss/at-rule-no-unknown': true,
+    'scss/dollar-variable-pattern': null,
     'selector-pseudo-class-no-unknown': [
       true,
       {
