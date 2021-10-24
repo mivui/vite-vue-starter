@@ -2,14 +2,8 @@
   <div>{{ state.title }}</div>
 </template>
 
-<script lang="ts">
-import { defineComponent, reactive } from 'vue';
+<script lang="ts" setup>
+import { reactive } from 'vue';
 
-export default defineComponent({
-  name: 'HelloWord',
-  setup() {
-    const state = reactive({ title: 'HelloWord' });
-    return { state };
-  },
-});
+const state = reactive({ title: 'HelloWord' });
 </script>
