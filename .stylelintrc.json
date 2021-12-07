@@ -1,23 +1,27 @@
-module.exports = {
-  extends: [
-    'stylelint-config-recommended-vue',
-    'stylelint-config-standard-scss',
-    'stylelint-config-prettier',
+{
+  "extends": [
+    "stylelint-config-standard-scss",
+    "stylelint-config-recommended-vue/scss"
   ],
-  rules: {
-    'at-rule-no-unknown': null,
-    'scss/dollar-variable-pattern': null,
-    'selector-pseudo-class-no-unknown': [
+  "rules": {
+    "selector-pseudo-class-no-unknown": [
       true,
       {
-        ignorePseudoClasses: ['deep', 'global'],
-      },
+        "ignorePseudoClasses": [
+          "deep",
+          "global"
+        ]
+      }
     ],
-    'selector-pseudo-element-no-unknown': [
+    "selector-pseudo-element-no-unknown": [
       true,
       {
-        ignorePseudoElements: ['v-deep', 'v-global', 'v-slotted'],
-      },
-    ],
-  },
-};
+        "ignorePseudoElements": [
+          "v-deep",
+          "v-global",
+          "v-slotted"
+        ]
+      }
+    ]
+  }
+}

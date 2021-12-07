@@ -3,7 +3,7 @@ import Logo from '@/assets/logo.png';
 import styles from './style/index.module.scss';
 
 export default defineComponent({
-  name: 'Home',
+  name: `Home`,
   setup() {
     document.title = import.meta.env.VITE_APP_TITLE;
 
