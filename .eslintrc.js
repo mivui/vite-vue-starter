@@ -2,7 +2,6 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
-    'jest/globals': true,
   },
   globals: {
     defineProps: 'readonly',
@@ -12,7 +11,6 @@ module.exports = {
   },
   extends: [
     'airbnb-base',
-    'plugin:jest/recommended',
     'plugin:import/recommended',
     'plugin:vue/vue3-recommended',
     'plugin:prettier/recommended',
@@ -28,7 +26,7 @@ module.exports = {
     sourceType: 'module',
     extraFileExtensions: ['.vue'],
   },
-  plugins: ['vue', '@typescript-eslint', 'prettier', 'import', 'jest'],
+  plugins: ['vue', '@typescript-eslint', 'prettier', 'import'],
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
