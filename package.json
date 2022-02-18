@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "serve": "vite preview",
+    "preview": "vite preview",
     "eslint": "eslint --fix",
     "stylelint": "stylelint **/*.{css,less,sass,scss}",
     "test": "jest"
