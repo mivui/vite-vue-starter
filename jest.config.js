@@ -5,7 +5,7 @@ module.exports = {
   testEnvironment: 'jsdom',
   coverageDirectory: 'coverage',
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/src/$1',
+    '^~/(.*)$': '<rootDir>/src/$1',
   },
   testMatch: [
     '**/__tests__/**/*.+(js|ts|tsx)',

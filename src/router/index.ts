@@ -8,7 +8,7 @@ export const routes: Array<RouteRecordRaw> = [
   {
     path: '/index',
     name: 'index',
-    component: () => import('@/pages/home'),
+    component: () => import('~/pages/home'),
   },
   {
     path: '/:pathMatch(.*)*',
