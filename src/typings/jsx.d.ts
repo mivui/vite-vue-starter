@@ -1,5 +1,7 @@
+import { VNode } from 'vue';
+
 export declare interface VueSlots<T = any> {
-  [name: string]: (payload: T) => JSX.Element | null;
+  [name: string]: (payload: T) => VNode | null;
 }
 
 export declare type VueModel =
@@ -18,7 +20,7 @@ declare interface JsxComponentCustomProps {
   vSlots?: VueSlots;
   vModel?: VueModel;
   vModels?: VueModel[];
-  vHtml?: string | JSX.Element | null;
+  vHtml?: string | VNode | null;
 }
 
 declare module 'vue' {
