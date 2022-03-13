@@ -1,27 +1,6 @@
 {
   "extends": [
     "stylelint-config-standard-scss",
-    "stylelint-config-recommended-vue/scss"
-  ],
-  "rules": {
-    "selector-pseudo-class-no-unknown": [
-      true,
-      {
-        "ignorePseudoClasses": [
-          "deep",
-          "global"
-        ]
-      }
-    ],
-    "selector-pseudo-element-no-unknown": [
-      true,
-      {
-        "ignorePseudoElements": [
-          "v-deep",
-          "v-global",
-          "v-slotted"
-        ]
-      }
-    ]
-  }
+    "stylelint-config-standard-vue/scss"
+  ]
 }
