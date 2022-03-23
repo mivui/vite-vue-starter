@@ -8,7 +8,8 @@
     "preview": "vite preview",
     "eslint": "eslint --fix",
     "stylelint": "stylelint **/*.{css,less,sass,scss}",
-    "test": "jest"
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
   },
   "dependencies": {
     "pinia": "^2.0.12",
@@ -17,21 +18,18 @@
   },
   "devDependencies": {
     "@types/node": "^16.0.0",
-    "@typescript-eslint/eslint-plugin": "^5.15.0",
-    "@typescript-eslint/parser": "^5.15.0",
+    "@typescript-eslint/eslint-plugin": "^5.16.0",
+    "@typescript-eslint/parser": "^5.16.0",
     "@vitejs/plugin-legacy": "^1.7.1",
     "@vitejs/plugin-vue": "^2.2.4",
     "@vitejs/plugin-vue-jsx": "^1.3.8",
     "@vue/compiler-sfc": "^3.2.31",
-    "@vue/test-utils": "^2.0.0-rc.18",
     "eslint": "^8.11.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.25.4",
-    "eslint-plugin-jest": "^26.1.1",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^8.5.0",
-    "jest": "^27.5.1",
     "postcss-html": "^1.3.0",
     "prettier": "^2.6.0",
     "sass": "^1.49.0",
@@ -39,9 +37,9 @@
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-standard-scss": "^3.0.0",
     "stylelint-config-standard-vue": "^1.0.0",
-    "ts-jest": "^27.1.3",
     "typescript": "^4.6.2",
     "vite": "^2.8.6",
-    "vue-tsc": "^0.32.1"
+    "vitest": "^0.7.9",
+    "vue-tsc": "^0.33.7"
   }
 }

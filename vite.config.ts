@@ -1,3 +1,5 @@
+/// <reference types="vitest" />
+
 import { defineConfig } from 'vite';
 import { resolve } from 'path';
 import Vue from '@vitejs/plugin-vue';
@@ -24,6 +26,9 @@ export default defineConfig({
     modules: {
       localsConvention: 'camelCase',
     },
+  },
+  test: {
+    globals: true,
   },
   build: {
     target: 'modules',
