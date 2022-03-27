@@ -13,7 +13,7 @@ export declare type VueModel =
   | undefined
   | symbol
   | Record<string, unknown>
-  | [unknown, string];
+  | Record<string, any>[];
 
 declare interface JsxComponentCustomProps {
   vShow?: boolean;
@@ -26,5 +26,5 @@ declare interface JsxComponentCustomProps {
 declare module 'vue' {
   interface HTMLAttributes extends JsxComponentCustomProps {}
 
-  interface ComponentCustomProps extends HTMLAttributes {}
+  interface ComponentCustomProps extends JsxComponentCustomProps {}
 }
