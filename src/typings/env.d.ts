@@ -1,4 +1,4 @@
-/// <reference types="vite/client" />
+/// <reference types="vite/client.d.ts" />
 
 interface ImportMetaEnv {
   readonly VITE_APP_TITLE: string;
