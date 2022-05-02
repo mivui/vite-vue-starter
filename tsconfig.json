@@ -10,11 +10,11 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "esModuleInterop": true,
-    "skipLibCheck": true,
     "lib": [
       "esnext",
       "dom"
     ],
+    "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
       "~/*": [
