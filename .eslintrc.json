@@ -13,7 +13,7 @@
     "withDefaults": "readonly"
   },
   "extends": [
-    "airbnb-base",
+    "eslint:recommended",
     "plugin:import/recommended",
     "plugin:vue/vue3-recommended",
     "plugin:prettier/recommended",
@@ -22,11 +22,11 @@
   "parser": "vue-eslint-parser",
   "parserOptions": {
     "parser": "@typescript-eslint/parser",
+    "ecmaVersion": "latest",
+    "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true
     },
-    "ecmaVersion": "latest",
-    "sourceType": "module",
     "extraFileExtensions": [".vue"]
   },
   "plugins": ["vue", "@typescript-eslint", "prettier", "import"],
