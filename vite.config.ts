@@ -1,10 +1,9 @@
-/// <reference types="vitest" />
-
 import { defineConfig } from 'vite';
 import { resolve } from 'path';
 import Vue from '@vitejs/plugin-vue';
 import VueJsx from '@vitejs/plugin-vue-jsx';
 import Legacy from '@vitejs/plugin-legacy';
+import PolyfillCommonjs from 'vite-polyfill-commonjs';
 
 export default defineConfig({
   resolve: {
@@ -13,6 +12,7 @@ export default defineConfig({
         find: '~/',
         replacement: `${resolve(__dirname, 'src')}/`,
       },
+      ...PolyfillCommonjs(),
     ],
   },
   plugins: [
@@ -27,21 +27,28 @@ export default defineConfig({
       localsConvention: 'camelCase',
     },
   },
-  test: {
-    globals: true,
+  esbuild: {
+    pure: ['console.log'],
+    drop: ['debugger'],
   },
   build: {
-    target: 'modules',
     outDir: 'dist',
     assetsDir: 'assets',
     sourcemap: false,
+    chunkSizeWarningLimit: 1024,
+    commonjsOptions: {
+      include: [/node_modules/],
+    },
+  },
+  preview: {
+    host: '0.0.0.0',
+    port: 8080,
   },
   server: {
     host: '0.0.0.0',
     port: 80,
     https: false,
     open: false,
-    cors: true,
     // proxy: {
     //   '/api': {
     //     target: 'http://127.0.0.1:8080',
