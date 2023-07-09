@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "pinia": "^2.1.4",
-    "pinia-plugin-store": "^2.1.20",
+    "pinia-plugin-tools": "^2.1.1",
     "vue": "^3.3.4",
     "vue-router": "^4.2.4"
   },
