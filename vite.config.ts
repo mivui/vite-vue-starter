@@ -3,7 +3,7 @@ import { resolve } from 'path';
 import Vue from '@vitejs/plugin-vue';
 import VueJsx from '@vitejs/plugin-vue-jsx';
 import Legacy from '@vitejs/plugin-legacy';
-import PolyfillNodejs from 'vite-polyfill-nodejs';
+import PolyfillNodejs from 'vite-plugin-polyfill-nodejs';
 
 export default defineConfig({
   resolve: {
