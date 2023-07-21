@@ -3,7 +3,7 @@ import { resolve } from 'path';
 import Vue from '@vitejs/plugin-vue';
 import VueJsx from '@vitejs/plugin-vue-jsx';
 import Legacy from '@vitejs/plugin-legacy';
-import PolyfillCommonjs from 'vite-plugin-polyfill-commonjs';
+import PolyfillNodejs from 'vite-plugin-polyfill-node';
 
 export default defineConfig({
   resolve: {
@@ -20,7 +20,7 @@ export default defineConfig({
     Legacy({
       targets: { chrome: '49', firefox: '18' },
     }),
-    PolyfillCommonjs(),
+    PolyfillNodejs(),
   ],
   css: {
     modules: {
