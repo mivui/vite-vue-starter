@@ -3,7 +3,7 @@ import type { UserConfig } from 'vitest';
 import viteConfig from './vite.config';
 
 export default mergeConfig(
-  viteConfig as UserConfig,
+  viteConfig,
   defineConfig({
     test: {
       globals: true,
