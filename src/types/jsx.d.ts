@@ -1,4 +1,4 @@
-import { VNode } from 'vue';
+import type { VNode } from 'vue';
 
 export declare interface VueSlots<T = any> {
   [name: string]: (payload: T) => VNode | null;
