@@ -7,8 +7,8 @@
     "restart": "vite --force",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
-    "eslint": "eslint --fix **/*.{ts,vue}",
-    "stylelint": "stylelint **/*.{css,less,sass,scss}",
+    "eslint": "eslint --fix src/**/*.{ts,tsx,vue}",
+    "stylelint": "stylelint src/**/*.{css,less,scss}",
     "test": "vitest",
     "coverage": "vitest run --coverage"
   },
@@ -22,7 +22,7 @@
     "vue-router": "^4.2.4"
   },
   "devDependencies": {
-    "@types/node": "^18.17.2",
+    "@types/node": "^18.17.3",
     "@typescript-eslint/eslint-plugin": "^6.2.1",
     "@typescript-eslint/parser": "^6.2.1",
     "@vitejs/plugin-legacy": "^4.1.1",
