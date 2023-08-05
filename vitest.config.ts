@@ -1,5 +1,4 @@
 import { defineConfig, mergeConfig } from 'vitest/config';
-import type { UserConfig } from 'vitest';
 import viteConfig from './vite.config';
 
 export default mergeConfig(
@@ -8,9 +7,9 @@ export default mergeConfig(
     test: {
       globals: true,
       environment: 'happy-dom',
-      transformMode: {
-        web: [/\.(vue|[tj]s|[tj]sx)$/],
+      testTransformMode: {
+        web: ['.vue', '.ts', '.tsx', '.js', '.jsx'],
       },
     },
-  }) as UserConfig,
+  }),
 );
