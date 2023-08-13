@@ -18,7 +18,6 @@
   },
   "extends": [
     "standard",
-    "plugin:import/recommended",
     "plugin:vue/vue3-recommended",
     "plugin:prettier/recommended",
     "plugin:@typescript-eslint/recommended"
@@ -33,7 +32,7 @@
     },
     "extraFileExtensions": [".vue"]
   },
-  "plugins": ["vue", "@typescript-eslint", "prettier", "import"],
+  "plugins": ["vue", "@typescript-eslint", "prettier"],
   "rules": {
     "no-console": "off",
     "no-debugger": "off",
@@ -50,21 +49,6 @@
         "allowForLoopAfterthoughts": true
       }
     ],
-    "import/named": "off",
-    "import/default": "off",
-    "import/namespace": "off",
-    "import/extensions": "off",
-    "import/no-unresolved": "off",
-    "import/prefer-default-export": "off",
-    "import/no-cycle": [
-      "error",
-      {
-        "maxDepth": 1
-      }
-    ],
-    "import/no-named-as-default": "off",
-    "import/no-extraneous-dependencies": "off",
-    "import/no-named-as-default-member": "off",
     "@typescript-eslint/no-shadow": "error",
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/no-empty-function": "off",
@@ -100,10 +84,5 @@
         "allowSeparatedGroups": true
       }
     ]
-  },
-  "settings": {
-    "import/parsers": {
-      "@typescript-eslint/parser": [".ts", ".tsx", ".vue"]
-    }
   }
 }
