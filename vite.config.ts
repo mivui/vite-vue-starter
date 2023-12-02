@@ -1,8 +1,8 @@
-import { defineConfig } from 'vite';
-import { resolve } from 'path';
+import Legacy from '@vitejs/plugin-legacy';
 import Vue from '@vitejs/plugin-vue';
 import VueJsx from '@vitejs/plugin-vue-jsx';
-import Legacy from '@vitejs/plugin-legacy';
+import { resolve } from 'path';
+import { defineConfig } from 'vite';
 
 export default defineConfig({
   resolve: {
@@ -42,7 +42,6 @@ export default defineConfig({
   server: {
     host: '0.0.0.0',
     port: 80,
-    https: false,
     open: false,
     // proxy: {
     //   '/api': {
