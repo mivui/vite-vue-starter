@@ -1,4 +1,3 @@
-import Legacy from '@vitejs/plugin-legacy';
 import Vue from '@vitejs/plugin-vue';
 import VueJsx from '@vitejs/plugin-vue-jsx';
 import { resolve } from 'path';
@@ -13,13 +12,7 @@ export default defineConfig({
       },
     ],
   },
-  plugins: [
-    Vue(),
-    VueJsx(),
-    Legacy({
-      targets: { chrome: '49', firefox: '18' },
-    }),
-  ],
+  plugins: [Vue(), VueJsx()],
   css: {
     modules: {
       localsConvention: 'camelCase',
@@ -30,6 +23,7 @@ export default defineConfig({
     drop: ['debugger'],
   },
   build: {
+    target: 'es2020',
     outDir: 'dist',
     assetsDir: 'assets',
     sourcemap: false,
