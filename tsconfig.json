@@ -12,6 +12,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "moduleDetection": "force",
+    "noImplicitAny": false,
     "noEmit": true,
     "jsx": "preserve",
 

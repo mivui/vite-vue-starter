@@ -9,13 +9,11 @@ export default defineComponent({
   setup() {
     document.title = import.meta.env.VITE_APP_TITLE;
 
-    return () => {
-      return (
-        <div class={styles.helloWorld}>
-          <img src={Logo} alt="Vue" />
-          <div style={{ marginLeft: '13px' }}>Hello World!</div>
-        </div>
-      );
-    };
+    return () => (
+      <div class={styles.helloWorld}>
+        <img src={Logo} alt="Vue" />
+        <div style={{ marginLeft: '13px' }}>Hello World!</div>
+      </div>
+    );
   },
 });
