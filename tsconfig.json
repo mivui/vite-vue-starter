@@ -15,6 +15,7 @@
     "noImplicitAny": false,
     "noEmit": true,
     "jsx": "preserve",
+    "jsxImportSource": "vue",
 
     /* Linting */
     "strict": true,
